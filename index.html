@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoridade Despachante | Brasília - DF</title>
+    <meta name="description" content="Sua Solução Completa para Documentação Veicular e Imobiliária em Brasília/DF. Agilidade, segurança e experiência.">
+    <meta name="keywords" content="despachante Brasília, Detran DF, regularização veículo, despachante imobiliário, licenciamento, transferência">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <!-- Using a text placeholder if image is missing, but linking to the image -->
+                <img src="assets/images/logo.png" alt="Autoridade Despachante Logo" id="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                <span id="logo-text" style="display:none; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--gold);">AUTORIDADE<br><span style="font-size: 0.8rem; font-weight: 400; color: var(--text-light);">DESPACHANTE</span></span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#como-contratar" class="nav-link">Como Funciona</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="https://wa.me/5561986250267" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Fale Conosco</a>
+                </div>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Sua Solução Completa para Documentação <span class="highlight">Veicular e Imobiliária.</span></h1>
+            <p class="hero-subtitle">Agilidade, segurança e experiência para indivíduos e empresas em Brasília/DF. Cuidamos da burocracia para você focar no que importa.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5561986250267" target="_blank" class="btn btn-primary btn-large">Fale Conosco Agora</a>
+                <a href="#contato" class="btn btn-outline btn-large">Solicite um Orçamento Grátis</a>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Credenciados CRDD-DF & Detran-DF</span>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Atendimento Ágil e Online</span>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Clientes 100% Satisfeitos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services section-padding bg-dark" id="servicos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Nossas Especialidades</span>
+                <h2 class="section-title">Serviços Rápidos e Seguros</h2>
+                <p class="section-desc">Atendimento completo para quem busca eficiência na regularização do seu patrimônio.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Veicular -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="service-title">Serviços Veiculares</h3>
+                    <p class="service-text">Resolvemos toda a burocracia do seu veículo de forma rápida. De licenciamento a transferência de propriedade.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check text-gold"></i> Transferência de Propriedade</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Licenciamento Anual (CRLV)</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Pagamento de IPVA e Multas</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Baixa de Veículos e Gravames</li>
+                    </ul>
+                    <a href="https://wa.me/5561986250267?text=Gostaria%20de%20saber%20mais%20sobre%20Servi%C3%A7os%20Veiculares" target="_blank" class="btn btn-outline mt-4">Solicitar Serviço Veicular</a>
+                </div>
+
+                <!-- Imobiliário -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3 class="service-title">Serviços Imobiliários</h3>
+                    <p class="service-text">Assessoria completa na documentação do seu imóvel. Compras, vendas e regularização no DF.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check text-gold"></i> Regularização de Imóveis</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Escritura e Registro em Cartório</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Averbação de Construção</li>
+                        <li><i class="fa-solid fa-check text-gold"></i> Emissão de Certidões</li>
+                    </ul>
+                    <a href="https://wa.me/5561986250267?text=Gostaria%20de%20saber%20mais%20sobre%20Servi%C3%A7os%20Imobili%C3%A1rios" target="_blank" class="btn btn-outline mt-4">Solicitar Serviço Imobiliário</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="about section-padding bg-darker" id="sobre">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-subtitle">Quem Somos</span>
+                <h2 class="section-title">Experiência que Transmite <span class="highlight">Confiança</span></h2>
+                <p>A Autoridade Despachante nasceu com a missão de descomplicar processos burocráticos. Com foco em Brasília/DF, ajudamos indivíduos e empresas a regularizarem documentos de forma ágil e segura.</p>
+                <p>Nossa equipe é formada por profissionais altamente qualificados e credenciados. Trabalhamos pautados pela ética e transparência para garantir a melhor experiência para os nossos clientes, incluindo Brasileiros que residem no exterior.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4 class="stat-number text-gold">CRDD-DF</h4>
+                        <span class="stat-text">Credenciamento Oficial</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4 class="stat-number text-gold">Detran-DF</h4>
+                        <span class="stat-text">Parceria Autorizada</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <!-- Placeholder for a professional image, e.g. office or documents -->
+                <div class="image-placeholder">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="how-it-works section-padding bg-dark" id="como-contratar">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Processo Simplificado</span>
+                <h2 class="section-title">Como Contratar Nossos Serviços?</h2>
+                <p class="section-desc">Resolvemos sua documentação em 5 passos simples, sem dor de cabeça.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Contato Inicial</h4>
+                    <p class="step-desc">Fale conosco pelo WhatsApp, formulário ou telefone, explicando sua necessidade.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Análise e Orçamento</h4>
+                    <p class="step-desc">Analisamos seu caso e enviamos um orçamento detalhado e transparente.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Envio de Documentos</h4>
+                    <p class="step-desc">Orientações claras para o envio da documentação de forma totalmente segura.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Acompanhamento</h4>
+                    <p class="step-desc">Você será informado ativamente sobre o andamento de todo o processo.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4 class="step-title">Entrega Final</h4>
+                    <p class="step-desc">Receba seus documentos finalizados e regularizados com total conforto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Optional but requested) -->
+    <section class="testimonials section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Excelente atendimento! Resolveram a transferência do meu carro com uma agilidade que eu nunca vi no DF."</p>
+                    <div class="testimonial-author">
+                        <h5 class="author-name">Carlos S.</h5>
+                        <span class="author-role">Cliente Veicular</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Moro no exterior e precisava regularizar um imóvel em Brasília. A Autoridade Despachante cuidou de tudo de forma impecável."</p>
+                    <div class="testimonial-author">
+                        <h5 class="author-name">Mariana T.</h5>
+                        <span class="author-role">Cliente Imobiliário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section-padding bg-dark" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Dúvidas?</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            O que é um despachante documental?
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>É o profissional legalmente habilitado para representar pessoas físicas e jurídicas perante órgãos públicos, como Detran e Cartórios, resolvendo toda a burocracia de documentos veiculares e imobiliários.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Por que contratar um despachante?
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Para economizar tempo, evitar erros na documentação que podem gerar multas ou atrasos, e garantir que todo o processo seja feito com segurança jurídica e eficiência.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Vocês atendem online?
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Sim! Atendemos 100% online, facilitando a vida de quem não tem tempo a perder. Inclusive, temos forte atuação com brasileiros que moram no exterior e precisam de representação no DF.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Como sei que o despachante é confiável?
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Verifique as credenciais. Nós somos devidamente credenciados no CRDD-DF (Conselho Regional dos Despachantes Documentalistas) e no Detran-DF, operando estritamente dentro da lei.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact section-padding bg-darker" id="contato">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Pronto para Regularizar <br>Sua Vida?</h2>
+                    <p class="mb-4">Entre em contato hoje mesmo e receba um orçamento sem compromisso. Nossa equipe está pronta para te atender.</p>
+                    
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/5561986250267" class="text-gold">+55 (61) 98625-0267</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <a href="mailto:contato@autoridadedespachante.com.br" class="text-gold">contato@autoridadedespachante.com.br</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Atendimento</h4>
+                            <span>Brasília - DF e 100% Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://instagram.com/autoridadedespachante" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <!-- Outras redes sociais podem ser adicionadas aqui -->
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso!');">
+                        <h3>Envie uma Mensagem</h3>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone / WhatsApp</label>
+                            <input type="tel" id="phone" required placeholder="(61) 90000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Solicitar Orçamento</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2 style="font-family: 'Outfit'; color: var(--gold); margin-bottom: 1rem;">AUTORIDADE<br><span style="font-size: 1rem; color: #fff;">DESPACHANTE</span></h2>
+                <p>Sua Solução Completa para Documentação Veicular e Imobiliária em Brasília/DF.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#servicos">Licenciamento</a></li>
+                    <li><a href="#servicos">Transferência de Veículo</a></li>
+                    <li><a href="#servicos">Regularização de Imóveis</a></li>
+                    <li><a href="#servicos">Escritura e Registro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Autoridade Despachante. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5561986250267" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
