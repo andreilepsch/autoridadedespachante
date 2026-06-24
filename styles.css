@@ -49,6 +49,22 @@ img {
     height: auto;
 }
 
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+.logo-text span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    transition: var(--transition);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -170,7 +186,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .header.scrolled {
     padding: 0.5rem 0;
-    background-color: rgba(5, 6, 8, 0.98);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header.scrolled .logo-text,
+.header.scrolled .logo-text span,
+.header.scrolled .nav-link {
+    color: #232323;
+}
+
+.header.scrolled .nav-link:hover,
+.header.scrolled .nav-link.active {
+    color: var(--gold);
+}
+
+.header.scrolled .bar {
+    background-color: #232323;
 }
 
 .nav-container {
@@ -190,10 +222,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-main);
     position: relative;
+    transition: var(--transition);
 }
 
 .nav-link::after {
