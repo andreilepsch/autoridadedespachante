@@ -49,20 +49,12 @@ img {
     height: auto;
 }
 
-.logo-text {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: #ffffff;
-    line-height: 1;
-    transition: var(--transition);
+.logo img.logo-negative {
+    display: block;
 }
 
-.logo-text span {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #ffffff;
-    transition: var(--transition);
+.logo img.logo-positive {
+    display: none;
 }
 
 /* Typography */
@@ -190,8 +182,14 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.header.scrolled .logo-text,
-.header.scrolled .logo-text span,
+.header.scrolled .logo img.logo-negative {
+    display: none;
+}
+
+.header.scrolled .logo img.logo-positive {
+    display: block;
+}
+
 .header.scrolled .nav-link {
     color: #232323;
 }
