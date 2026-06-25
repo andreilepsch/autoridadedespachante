@@ -1,0 +1,25 @@
+{
+  "name": "autoridade-despachante",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreilepsch/autoridadedespachante.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/andreilepsch/autoridadedespachante/issues"
+  },
+  "homepage": "https://github.com/andreilepsch/autoridadedespachante#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

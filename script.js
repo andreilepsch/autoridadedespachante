@@ -1,79 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Header Scroll Effect (Glassmorphism)
+    const header = document.getElementById("header");
+    const logoImg = document.getElementById("logo-img");
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // 2. Sticky Header
-    const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+            header.classList.add("bg-white/60", "backdrop-blur-md", "shadow-lg");
+            header.classList.remove("bg-transparent");
+            // Change text color to dark
+            document.querySelectorAll("#header .nav-link, #header .nav-btn").forEach(el => {
+                el.classList.add("text-gray-700");
+                el.classList.remove("text-white");
+            });
+            document.getElementById("mobile-menu-btn").classList.add("text-gray-700");
+            document.getElementById("mobile-menu-btn").classList.remove("text-white");
+            document.getElementById("mobile-menu").classList.add("bg-white/60", "backdrop-blur-md", "rounded-lg", "p-4");
+            
+            // Switch Logo to Dark
+            if(logoImg) logoImg.src = "assets/images/logo-horiz-positive.svg";
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove("bg-white/60", "backdrop-blur-md", "shadow-lg");
+            header.classList.add("bg-transparent");
+            // Change text color to white
+            document.querySelectorAll("#header .nav-link, #header .nav-btn").forEach(el => {
+                el.classList.remove("text-gray-700");
+                el.classList.add("text-white");
+            });
+            document.getElementById("mobile-menu-btn").classList.remove("text-gray-700");
+            document.getElementById("mobile-menu-btn").classList.add("text-white");
+            document.getElementById("mobile-menu").classList.remove("bg-white/60", "backdrop-blur-md", "rounded-lg", "p-4");
+            
+            // Switch Logo to Light
+            if(logoImg) logoImg.src = "assets/images/logo-horiz-negative.svg";
         }
     });
 
-    // 3. FAQ Accordion
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    // 2. Mobile Menu Toggle
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentElement;
-            const accordionContent = header.nextElementSibling;
+    if (mobileBtn) {
+        mobileBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            if(mobileMenu.classList.contains("hidden")){
+                menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+            } else {
+                menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+            }
+        });
+    }
+
+    // 3. FAQ Accordion Logic
+    const faqButtons = document.querySelectorAll('.faq-btn');
+
+    faqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
             
-            // Check if it's already active
-            const isActive = accordionItem.classList.contains('active');
-            
-            // Close all other accordions (optional, but good for UX)
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.accordion-content').style.maxHeight = null;
+            // Close all other accordions
+            document.querySelectorAll('.faq-content').forEach(c => {
+                if(c !== content) {
+                    c.style.maxHeight = null;
+                    const cIcon = c.previousElementSibling.querySelector('i');
+                    if(cIcon) cIcon.style.transform = 'rotate(0deg)';
+                }
             });
-            
-            // If it wasn't active, open it
-            if (!isActive) {
-                accordionItem.classList.add('active');
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-            }
-        });
-    });
 
-    // 4. Update Active Link on Scroll
-    const sections = document.querySelectorAll('section');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            // Adding a small offset for the fixed header
-            if (scrollY >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
+            // Toggle current
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
             }
         });
     });
 });
+
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById("mobile-menu");
+        if(mobileMenu && !mobileMenu.classList.contains("hidden")){
+            mobileMenu.classList.add("hidden");
+            document.getElementById("menu-icon").setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        }
+    }
+}
