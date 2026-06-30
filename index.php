@@ -1,3 +1,8 @@
+<?php
+// Captura status de retorno do send_mail.php
+$status = $_GET['status'] ?? '';
+$msgErro = $_GET['msg'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -153,16 +158,24 @@
     </style>
     <!-- Fix overflow horizontal em mobile -->
     <style>
-        html, body {
+        html,
+        body {
             overflow-x: hidden !important;
             max-width: 100vw !important;
         }
+
         @media (max-width: 767px) {
-            .container, [class*="max-w-"] {
+
+            .container,
+            [class*="max-w-"] {
                 max-width: 100% !important;
                 box-sizing: border-box;
             }
-            img, video, svg, iframe {
+
+            img,
+            video,
+            svg,
+            iframe {
                 max-width: 100% !important;
             }
         }
@@ -217,7 +230,8 @@
                 </div>
 
                 <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden lg:hidden mt-2 pb-4 space-y-2" style="background: #0e2a45; border-radius: 12px; padding: 16px 20px; margin-top: 8px;">
+                <div id="mobile-menu" class="hidden lg:hidden mt-2 pb-4 space-y-2"
+                    style="background: #0e2a45; border-radius: 12px; padding: 16px 20px; margin-top: 8px;">
                     <button onclick="scrollToSection('inicio')"
                         class="block w-full text-left transition-colors py-2 font-medium text-white hover:text-gold"
                         style="font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.1);">Início</button>
@@ -337,6 +351,7 @@
                             min-height: unset !important;
                             border-radius: 12px !important;
                         }
+
                         #servicos-tabs {
                             flex-direction: row !important;
                             width: 100% !important;
@@ -344,6 +359,7 @@
                             overflow-x: auto;
                             border-radius: 0 !important;
                         }
+
                         .servico-tab-btn {
                             flex: 1;
                             min-width: 110px;
@@ -357,14 +373,17 @@
                             border-left: none !important;
                             border-bottom: 4px solid transparent;
                         }
+
                         .servico-tab-btn.mobile-active,
                         #tab-btn-veicular[style*='rgba(255,255,255,0.18)'] {
                             border-bottom-color: #C9A84C;
                         }
+
                         .servicos-content-panel {
                             padding: 20px 16px !important;
                         }
-                        .servicos-content-panel > div > div[style*='grid-template-columns: 1fr 1fr'] {
+
+                        .servicos-content-panel>div>div[style*='grid-template-columns: 1fr 1fr'] {
                             grid-template-columns: 1fr !important;
                         }
                     }
@@ -396,7 +415,8 @@
                     </div>
 
                     <!-- TAB CONTENT (right panel) -->
-                    <div class="servicos-content-panel" style="flex: 1; padding: 36px 40px; background: #fff; overflow-y: auto;">
+                    <div class="servicos-content-panel"
+                        style="flex: 1; padding: 36px 40px; background: #fff; overflow-y: auto;">
 
                         <!-- Veicular -->
                         <div id="tab-veicular" class="servico-tab-content">
@@ -1213,7 +1233,7 @@
                             </p>
                         </div>
 
-                        <div class="flex flex-col gap-6">
+                        <div class="flex flex-col gap-3 mt-8">
                             <!-- Telefone -->
                             <div class="flex items-center gap-4">
                                 <div
@@ -1221,9 +1241,9 @@
                                     <i class="fa-solid fa-phone text-lg"></i>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-[0.85rem] text-[#111827] uppercase tracking-wide">Telefone
+                                    <p class="font-bold text-[0.78rem] text-[#111827] uppercase tracking-wide">Telefone
                                     </p>
-                                    <p class="text-[#4b5563] font-medium mt-0.5">(61) 98215-7398</p>
+                                    <p class="text-[#4b5563] font-medium text-[0.88rem]">(61) 98625-0267</p>
                                 </div>
                             </div>
                             <!-- WhatsApp -->
@@ -1233,9 +1253,9 @@
                                     <i class="fa-brands fa-whatsapp text-xl"></i>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-[0.85rem] text-[#111827] uppercase tracking-wide">WhatsApp
+                                    <p class="font-bold text-[0.78rem] text-[#111827] uppercase tracking-wide">WhatsApp
                                     </p>
-                                    <p class="text-[#4b5563] font-medium mt-0.5">(61) 99214-9725</p>
+                                    <p class="text-[#4b5563] font-medium text-[0.88rem]">(61) 98625-0267</p>
                                 </div>
                             </div>
                             <!-- E-mail -->
@@ -1245,9 +1265,10 @@
                                     <i class="fa-regular fa-envelope text-lg"></i>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-[0.85rem] text-[#111827] uppercase tracking-wide">E-mail
+                                    <p class="font-bold text-[0.78rem] text-[#111827] uppercase tracking-wide">E-mail
                                     </p>
-                                    <p class="text-[#4b5563] font-medium mt-0.5">contato@despachantebrasilia.com.br</p>
+                                    <p class="text-[#4b5563] font-medium text-[0.88rem]">
+                                        contato@autoridadedespachante.com.br</p>
                                 </div>
                             </div>
                             <!-- Localização -->
@@ -1257,9 +1278,9 @@
                                     <i class="fa-solid fa-location-dot text-lg"></i>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-[0.85rem] text-[#111827] uppercase tracking-wide">
+                                    <p class="font-bold text-[0.78rem] text-[#111827] uppercase tracking-wide">
                                         Localização</p>
-                                    <p class="text-[#4b5563] font-medium mt-0.5">Brasília, DF</p>
+                                    <p class="text-[#4b5563] font-medium text-[0.88rem]">Brasília, DF</p>
                                 </div>
                             </div>
                             <!-- Horário -->
@@ -1269,9 +1290,10 @@
                                     <i class="fa-regular fa-clock text-lg"></i>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-[0.85rem] text-[#111827] uppercase tracking-wide">
+                                    <p class="font-bold text-[0.78rem] text-[#111827] uppercase tracking-wide">
                                         Atendimento</p>
-                                    <p class="text-[#4b5563] font-medium mt-0.5">Segunda a Sábado: 08:00 - 18:00</p>
+                                    <p class="text-[#4b5563] font-medium text-[0.88rem]">Segunda a Sábado: 08:00 - 18:00
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1309,31 +1331,68 @@
                     <!-- Right Column: Form -->
                     <div
                         class="bg-white rounded-[1.5rem] shadow-2xl p-8 lg:p-10 text-gray-900 border border-gray-100 relative">
-                        <h3 class="text-[1.75rem] font-bold text-[#1F4E78] mb-8">Solicite um Orçamento</h3>
-                        <form id="contact-form" class="space-y-5"
-                            onsubmit="event.preventDefault(); alert('Solicitação enviada com sucesso!');">
+                        <h3 class="text-[1.75rem] font-bold text-[#1F4E78] mb-4">Solicite um Orçamento</h3>
+
+                        <?php if ($status === 'ok'): ?>
+                            <div
+                                style="background: #f0fff4; border: 1px solid #68d391; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fa-solid fa-circle-check" style="color: #38a169; font-size: 1.3rem;"></i>
+                                <div>
+                                    <strong style="color: #276749;">Mensagem enviada com sucesso!</strong><br>
+                                    <span style="color: #2f855a; font-size: 0.9rem;">Respondemos em até 2 horas úteis.
+                                        Verifique também sua caixa de entrada.</span>
+                                </div>
+                            </div>
+                        <?php elseif ($status === 'erro'): ?>
+                            <div
+                                style="background: #fff5f5; border: 1px solid #fc8181; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fa-solid fa-circle-exclamation" style="color: #e53e3e; font-size: 1.3rem;"></i>
+                                <div>
+                                    <strong style="color: #742a2a;">Ocorreu um erro ao enviar.</strong><br>
+                                    <span style="color: #9b2c2c; font-size: 0.9rem;">Por favor, tente novamente ou entre em
+                                        contato pelo WhatsApp.</span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php
+                            // Geração do Math Captcha
+                            $num1 = rand(1, 9);
+                            $num2 = rand(1, 9);
+                            $soma = $num1 + $num2;
+                            $captcha_hash = md5($soma . 'autdesp2026');
+                        ?>
+                        <form id="contact-form" class="space-y-5" method="POST" action="send_mail.php">
+                            <input type="hidden" name="captcha_hash" value="<?php echo $captcha_hash; ?>">
+                            
+                            <!-- Honeypot (Isca para Robôs) -->
+                            <div style="display:none; visibility:hidden;">
+                                <label>Não preencha este campo:</label>
+                                <input type="text" name="telefone_secundario" value="">
+                            </div>
+
                             <div>
                                 <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">Nome *</label>
-                                <input type="text" required
+                                <input type="text" name="nome" required
                                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 transition-shadow"
                                     placeholder="Seu nome completo">
                             </div>
                             <div>
                                 <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">E-mail *</label>
-                                <input type="email" required
+                                <input type="email" name="email" required
                                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 transition-shadow"
                                     placeholder="seu@email.com">
                             </div>
                             <div>
                                 <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">Telefone/WhatsApp
                                     *</label>
-                                <input type="tel" required
+                                <input type="tel" name="telefone" required
                                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 transition-shadow"
                                     placeholder="(61) 99999-9999">
                             </div>
                             <div>
                                 <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">Tipo de Serviço</label>
-                                <select
+                                <select name="servico"
                                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 appearance-none transition-shadow">
                                     <option value="" disabled selected>Selecione um serviço</option>
                                     <option value="transferencia">Transferência de Veículo</option>
@@ -1347,16 +1406,42 @@
                             </div>
                             <div>
                                 <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">Mensagem</label>
-                                <textarea rows="3"
+                                <textarea name="mensagem" rows="3"
                                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 resize-none transition-shadow"
                                     placeholder="Descreva brevemente sua necessidade..."></textarea>
                             </div>
+                            
+                            <!-- Captcha Matemático -->
+                            <div>
+                                <label class="block text-[0.9rem] font-bold text-[#1F4E78] mb-2">
+                                    Anti-Spam: Quanto é <?php echo $num1; ?> + <?php echo $num2; ?>? *
+                                </label>
+                                <input type="number" name="captcha_answer" required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#FF6B35] outline-none bg-white text-gray-900 transition-shadow"
+                                    placeholder="Digite o resultado">
+                            </div>
                             <div class="pt-2">
-                                <button type="submit"
-                                    class="w-full text-white px-6 py-4 rounded-lg font-bold transition-colors text-center text-[1rem]"
-                                    style="background-color: #C9A84C;"
-                                    onmouseover="this.style.backgroundColor='#b8943f'"
-                                    onmouseout="this.style.backgroundColor='#C9A84C'">
+                                <style>
+                                    #btn-enviar-form {
+                                        display: block !important;
+                                        width: 100% !important;
+                                        background-color: #C9A84C !important;
+                                        color: #ffffff !important;
+                                        padding: 16px 24px !important;
+                                        border: none !important;
+                                        border-radius: 8px !important;
+                                        font-size: 1rem !important;
+                                        font-weight: 700 !important;
+                                        cursor: pointer !important;
+                                        text-align: center !important;
+                                        transition: background-color 0.2s !important;
+                                    }
+
+                                    #btn-enviar-form:hover {
+                                        background-color: #b8943f !important;
+                                    }
+                                </style>
+                                <button type="submit" id="btn-enviar-form">
                                     Enviar Solicitação
                                 </button>
                             </div>
@@ -1465,6 +1550,63 @@
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
+
+    <!-- SweetAlert2 (Popup de Sucesso/Erro) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const btn = document.getElementById('btn-enviar-form');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = 'Enviando... <i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+                    btn.disabled = true;
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'ok') {
+                            Swal.fire({
+                                title: 'Enviado com Sucesso!',
+                                text: 'Recebemos sua solicitação. Entraremos em contato em breve!',
+                                icon: 'success',
+                                confirmButtonColor: '#C9A84C'
+                            });
+                            form.reset();
+                        } else {
+                            Swal.fire({
+                                title: 'Oops!',
+                                text: data.msg || 'Houve um erro no envio. Tente novamente.',
+                                icon: 'error',
+                                confirmButtonColor: '#1F4E78'
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        Swal.fire({
+                            title: 'Erro de Conexão',
+                            text: 'Não foi possível enviar a mensagem no momento.',
+                            icon: 'error',
+                            confirmButtonColor: '#1F4E78'
+                        });
+                    })
+                    .finally(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
